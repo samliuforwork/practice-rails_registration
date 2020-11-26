@@ -1,0 +1,10 @@
+<h1>登入會員頁面</h1>
+
+<%= form_with(model: @member, url:'/members/sign_in', method: 'post', local: true) do |form| %>
+<%= form.label :account %>
+<%= form.text_field :account %>
+
+<%= form.label :password %>
+<%= form.text_field :password %>
+<%= form.submit %>
+<% end %>

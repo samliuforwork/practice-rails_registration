@@ -1,0 +1,38 @@
+<%= flash[:notice] %>
+<h1>註冊頁面</h1>
+
+<% if @member.errors.any? %>
+    <ul>
+        <% @member.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+        <% end %>
+    </ul>
+<% end %>
+
+<%=form_for (@member) do |form| %>
+<ul>
+<li>
+<%= form.label:大名 %>
+<%= form.text_field:name%>
+</li>
+<li>
+<%= form.label:帳戶account %>
+<%= form.text_field:account%>
+</li>
+<li>
+<%= form.label:輸入password %>
+<%= form.password_field:password %>
+</li>
+<li>
+<%= form.label:確認password %>
+<%= form.password_field:password_confirmation %>
+</li>
+<li>
+<%= form.label:您的email %>
+<%= form.text_field:email%>
+</li>
+</ul>
+<%= form.submit%>
+
+<% end %>
+<%= link_to 'previous page', :back %>

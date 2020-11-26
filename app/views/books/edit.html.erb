@@ -1,0 +1,21 @@
+<h3>edit book</h3>
+
+<% if @book.errors.any? %>
+    <ul>
+        <% @book.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+        <% end %>
+    </ul>
+<% end %>
+
+
+<%= form_for(@book) do |form| %>
+<%= form.label:title%>
+<%= form.text_field:title%>
+<%= form.label:price%>
+<%= form.text_field:price%>
+<%= form.submit%>
+<% end %>
+
+<%= link_to '回到上頁', :back %>
+<%= link_to '回到首頁', root_path %>

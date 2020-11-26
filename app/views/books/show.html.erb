@@ -1,0 +1,8 @@
+<% if @book %>
+    title:<%= @book.title %>
+    price:<%= @book.price %>
+    <%= link_to '回到上頁', :back %>
+<% else %>
+    <h3>查無此書</h3>
+    <%= link_to '回到上頁', :back %>
+<% end %>

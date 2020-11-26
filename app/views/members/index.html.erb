@@ -1,0 +1,14 @@
+<h2>會員清單</h2>
+
+<%= @members.each do |member| %>
+    <div class="div">
+會員姓名：<%= member.name %>
+會員帳戶：<%= member.account %>
+會員email：<%= member.email %>
+    </div>
+<% end %>
+
+<div>
+<%= link_to '檢視書清單', books_path %>
+<%= link_to '註冊會員', new_member_path %>
+</div>
